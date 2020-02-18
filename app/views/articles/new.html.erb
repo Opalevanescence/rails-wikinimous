@@ -1,0 +1,14 @@
+<%= link_to 'Wikinimous',  articles_path %>
+<%= link_to 'New Article', new_article_path  %>
+
+<h1>New article</h1>
+
+<%= form_for @article, url: '/articles' do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.lable :content %>
+  <%= f.text_field :content %>
+<% end %>
+
+<%= link_to 'Create Article', '/article' %>
+<%= link_to 'Back', '/article' %>
